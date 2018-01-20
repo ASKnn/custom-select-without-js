@@ -1,0 +1,238 @@
+.custom-select {
+	min-width: 200px;
+	border: 1px solid #4D7198;
+	transition: 0.2s ease-in-out all;
+	height: 30px
+}
+
+.custom-select:hover {
+	border: 1px solid #3D8AD4;
+}
+
+.custom-select,
+.custom-select input[type='radio']:checked + label,
+.custom-select::before {
+	background: #FFF;
+	min-height: 30px;
+	cursor: pointer;
+	border-radius: 5px;
+	line-height: 30px;
+}
+
+.custom-select input[type='radio']:checked + label {
+	height: 30px;
+}
+
+.custom-select > div {
+	margin-top: 0;
+	transition: 0.6s margin-top ease-in -0.5s; /*negative animation delay - hack, so that the animation starts as if long before the drop-down lists appeared */
+}
+
+.custom-select:focus > div,
+.custom-select.test-focus > div {
+	height: auto;
+	max-height: 400px;
+	margin-top: 34px;
+}
+
+.custom-select::before, label {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+
+.custom-select::after {
+	content: "▼";
+	border-radius: 0 4px 4px 0;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 26px;
+	text-align: center;
+	background: #2E92DA;
+	z-index: 2;
+	transition: 0.2s ease-in-out all;
+	color:#FFF;
+}
+
+.custom-select:hover::after {
+	background: #81C1EF;
+	color: #333;
+}
+
+.custom-select:focus input[type='radio'] + label,
+.custom-select.test-focus input[type='radio'] + label {
+	line-height: 30px;
+	min-height: 30px;
+	height: auto !important;
+	position: relative;
+}
+
+.custom-select label {
+	transition: background-color 0.1s ease-in, color 0.1s ease-in, opacity 0.1s ease-in;
+	cursor: pointer;
+}
+
+.custom-select:focus label,
+.custom-select.test-focus label {
+	border-radius: 3px;
+	margin: 3px 0;
+	border: 1px solid #999;
+	background: #FFF;
+	pointer-events: all}
+
+.custom-select label:hover {
+	background: #2E92DA;
+	color: #FFF}
+
+.custom-select:focus input[type='radio']:checked + label,
+.custom-select.test-focus input[type='radio']:checked + label {
+	background: #57AEF1;
+	color: #FFF;
+}
+
+.custom-select input[type='radio']:checked + label:hover {
+	color: #000;
+}
+
+.custom-select a {
+	transition: 0.3s all ease-out;
+	cursor: auto;
+	display: none}
+
+.custom-select:focus a,
+.custom-select.test-focus a{
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.custom-select input[type='radio']:disabled + label {
+	background: #EEE;
+	color: #BBB;
+	cursor: not-allowed;
+}
+
+.custom-select label:active {
+	background: #4D7198 ;
+	-webkit-tap-highlight-color: #4D7198;
+	color: #FFF;
+}
+
+@media (max-width: 1024px){
+	.test-only-mobile {
+		display: block !important;
+		font-weight: bold;
+		border: 1px solid crimson;
+		padding: 10px;
+		margin: 5px 0;
+		color: crimson;
+	}
+}
+
+
+/*only mobile*/
+@media (pointer:coarse){
+	.test-only-mobile {
+		display: none !important;
+	}
+	
+	
+	.custom-select,
+	.custom-select::after,
+	.custom-select::before,
+	.custom-select * {
+		transition: none !important;
+	}
+	
+	.custom-select:focus > div,
+	.custom-select.test-focus > div {
+		position: fixed;
+		left: 5%;
+		top: calc(30px + 3%);
+		width: 90%;
+		z-index: 4;
+		margin: 0;
+		height: auto;
+		max-height: 80%;
+		overflow: scroll;
+		border-radius: 10px;
+		-webkit-border-radius: 10px;
+		pointer-events: all;
+	}
+	
+	.custom-select:focus label,
+	.custom-select.test-focus label {
+		padding: 15px 10px 15px 36px;
+		margin: 0;
+		border: 0;
+		border-radius: 0;
+		border-bottom: 1px solid #999;
+		background: #F5F5F5;
+		pointer-events: all;
+		
+	}
+	.custom-select:focus input[type='radio']:checked + label,
+	.custom-select.test-focus input[type='radio']:checked + label {
+		border: 0;
+		border-radius: 0;
+		background: #007BEA;
+		color: #FFF;
+	}
+	
+	.custom-select:focus label:hover,
+	.custom-select:focus input[type='radio']:checked + label:hover,
+	.custom-select.test-focus label:hover,
+	.custom-select.test-focus input[type='radio']:checked + label:hover {
+		color: #000;
+	}
+	
+	.custom-select:focus::after,
+	.custom-select.test-focus::after {
+		position: fixed;
+		top: 0;
+		left: 0;
+		background: #F5F5F5;
+		z-index: 3;
+		width: 100%;
+		height: 30px;
+		border-radius: 0;
+		line-height: 30px;
+		content:  attr(data-default);
+		color: #000;
+		border-bottom: 1px dashed #CCC;
+		font-weight: bold;
+	}
+	
+	.custom-select:focus label::before,
+	.custom-select.test-focus label::before {
+		display: block;
+		content: "";
+		width: 14px;
+		height: 14px;
+		border-radius: 50%;
+		border: 1px solid #666;
+		position: absolute;
+		top: 36%;
+		left: 10px;
+		background: #FFF;
+	}
+	
+	.custom-select input[type='radio']:disabled + label::before {
+		border: 1px solid #999;
+	}
+	
+	.custom-select:focus input[type='radio']:checked + label::after,
+	.custom-select.test-focus input[type='radio']:checked + label::after {
+		display: block;
+		content: "";
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		position: absolute;
+		top: calc(36% + 3px);
+		left: 13px;
+		border-color: rgba(250,250,250,0.8);
+		background: #111;
+	}
+}
+/*mobile*/
