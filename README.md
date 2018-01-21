@@ -9,7 +9,8 @@ Now you can design the select and options very easily.
 
 ### Demo
 
-Demo page: https://asknn.github.io/custom-select-without-js/custom-select
+
+Demo page: [https://asknn.github.io/custom-select-without-js/custom-select](https://asknn.github.io/custom-select-without-js/custom-select)
 
 ### Screenshots
 
