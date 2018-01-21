@@ -1,7 +1,9 @@
-## Custom select and options on CSS.
+## Full custom select with options on HTML + CSS.
 
 The HTML element "select" is implemented using html + css. The element is based on input [type = 'radio'].
-And changing the "show / hide" property is implemented using the "tabindex" attribute.
+And toggle the "show / hide" property is implemented using the "tabindex" attribute.
+
+**No JavaScript. No rerender after dynamically DOM update. No "jump" height in text-container on loading.**
 
 Now you can design the select and options very easily.
 
@@ -11,9 +13,9 @@ Demo page: https://asknn.github.io/custom-select-without-js/custom-select
 
 ### Screenshots
 
-[Image](https://asknn.github.io/custom-select-without-js/screenshots/opened.png)
+![Image](screenshots/opened.png)
 
-[Image](https://asknn.github.io/custom-select-without-js/screenshots/opened-mobile.png)
+![Image](screenshots/opened-mobile.png)
 
 ### Browser support
 
