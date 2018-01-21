@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+## Custom select and options on CSS.
 
-You can use the [editor on GitHub](https://github.com/ASKnn/custom-select-without-js/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+The HTML element "select" is implemented using html + css. The element is based on input [type = 'radio'].
+And changing the "show / hide" property is implemented using the "tabindex" attribute.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Now you can design the select and options very easily.
 
-### Markdown
+### Demo
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Demo page: https://asknn.github.io/custom-select-without-js/custom-select
 
-```markdown
-Syntax highlighted code block
+### Screenshots
 
-# Header 1
-## Header 2
-### Header 3
+[Image](https://asknn.github.io/custom-select-without-js/screenshots/opened.png)
 
-- Bulleted
-- List
+[Image](https://asknn.github.io/custom-select-without-js/screenshots/opened-mobile.png)
 
-1. Numbered
-2. List
+### Browser support
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ASKnn/custom-select-without-js/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+* Firefox
+* Opera
+* Chrome
+* Internet Explorer 11
+* Microsoft Edge
+* Safari 9 (with enable JS)
+* Android Browser
